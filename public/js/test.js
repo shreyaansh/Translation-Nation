@@ -6,7 +6,7 @@ function myFunction() {
 		lang = document.getElementById("option2").value;
 	} else if (document.getElementById("option3").checked) {
 		//console.log(document.getElementById("option3").value);
-		//lang = document.getElementById("option3").value;
+		lang = document.getElementById("option3").value;
 	} else {
 		//console.log(document.getElementById("option1").value);
 		lang = document.getElementById("option1").value;
