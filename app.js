@@ -3,7 +3,7 @@ var express = require('express');
 var cfenv = require('cfenv');
 var app = express();
 app.use(express.static(__dirname + '/public'));
-var appEnv = cfenv.getAppEnv();
+cfenv.getAppEnv();
 
 var bodyParser = require('body-parser');
 
@@ -14,8 +14,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-//app.set('port', (process.env.PORT || 6004));
-//app.set('ip', (process.env.IP || "localhost"));
+app.set('port', process.env.PORT || 6004);
+app.set('ip', process.env.IP || "localhost");
 
 //Default REST Call for Testing
 app.post('/hello', function(req, res) {
@@ -45,13 +45,8 @@ app.get('/hello', function(request, response) {
 	response.send("Hello World");
 });
 
-/*var server = app.listen(app.get('port'),app.get('ip'), function() {
+app.listen(app.get('port'),app.get('ip'), function() {
   	console.log("Server is listening on port "+app.get('port')+" and ip "+app.get('ip'));
 	
 	console.log("Hello Boiz!!! Printed on Screen");
-});*/
-app.listen(appEnv.port, '0.0.0.0', function() {
-
-	// print a message when the server starts listening
-  console.log("server starting on " + appEnv.url);
 });
