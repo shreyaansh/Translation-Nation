@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "app",
   "version": "0.0.1",
   "private": true,
@@ -18,21 +17,4 @@
   "main": "app.js",
   "author": "",
   "license": "ISC"
-=======
-	"name": "NodejsStarterApp",
-	"version": "0.0.1",
-    "private": true,
-	"scripts": {
-		"start": "node app.js"
-	},
-	"dependencies": {
-		"mysql": "*",
-		"express": "4.13.x",
-		"cfenv": "1.0.x"
-	},
-	"repository": {},
-	"engines": {
-		"node": "4.2.x"
-	} 
->>>>>>> origin/master
 }
