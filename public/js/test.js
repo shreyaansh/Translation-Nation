@@ -75,7 +75,7 @@ function myFunction() {
 
 	xhr = new XMLHttpRequest();
 var url = "http://localhost:6002/hello";
-	var url1= "http://translateworlds.mybluemix.net/hello";
+	var url1= "http://translate-nation.mybluemix.net/hello";
 	console.log(url1);	//var url = "http://localhost:6002/hello";
 	xhr.open("POST", url1, true);
 	xhr.setRequestHeader("Content-type", "application/json");
