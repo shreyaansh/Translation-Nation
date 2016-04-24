@@ -37,9 +37,7 @@ app.post('/hello', function(req, res) {
 	}, function(err, translation) {
 	if(err) {
 		res.send(req.body.message);
-		//console.log(err);
 	} else {
-		//console.log(translation);
 		res.send(translation.translations[0].translation);
 	}
 	});
