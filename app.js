@@ -3,7 +3,10 @@ var express = require('express');
 var cfenv = require('cfenv');
 var app = express();
 app.use(express.static(__dirname + '/public'));
-cfenv.getAppEnv();
+var appEnv =cfenv.getAppEnv();
+var routes = require('./routes');
+
+var http = require('http');
 
 var bodyParser = require('body-parser');
 
@@ -22,14 +25,14 @@ app.set('ip', process.env.VCAP_APP_HOST || "localhost");
 app.post('/hello', function(req, res) {
 	console.log("It comes here!" + res.statusCode);
 	var language_translation = watson.language_translation({
-	username: '630d4a74-1870-401e-9823-e4bd457b6ad8',
-	password: 'KWHqPtSgvjBo',
+	username: 'e8de384a-58c3-4bae-b2a1-b1324e16b4f0',
+	password: 'ndpc66DLERye',
 	version: 'v2'
 	});
 
 	language_translation.translate({
 		text: req.body.message,
-		source: 'en',
+		source: req.body.langfrom,//'en',
 		target: req.body.language
 	}, function(err, translation) {
 	if(err) {
@@ -41,6 +44,8 @@ app.post('/hello', function(req, res) {
 	});
 });
 
+
+
 app.get('/hello', function(request, response) {
 	console.log("Hello!");
 	response.send("Hello World");
@@ -51,3 +56,5 @@ app.listen(app.get('port'),app.get('ip'), function() {
 	
 	console.log("Hello Boiz!!! Printed on Screen");
 });
+
+//module.exports = app;
