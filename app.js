@@ -12,7 +12,8 @@ app.set('ip', (process.env.IP || "localhost"));
 
 //Default REST Call for Testing
 app.get('/hello', function(request, response) {
-	response.send('Hello World!');
+	//response.send('Hello World!');
+	console.log("call comes here");
 });
 
 //Set the actual API Calls here!
