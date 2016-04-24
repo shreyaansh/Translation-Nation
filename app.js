@@ -1,3 +1,4 @@
+/*eslint-env node*/
 var express = require('express');
 var cfenv = require('cfenv');
 var app = express();
@@ -22,8 +23,8 @@ app.use(bodyParser.json())
 app.post('/hello', function(req, res) {
 	console.log("It comes here!" + res.statusCode);
 	var language_translation = watson.language_translation({
-	username: '82e40ac6-13ce-4548-b3c6-9e714153aac8',
-	password: 'M1LEFR1wsaAH',
+	username: '630d4a74-1870-401e-9823-e4bd457b6ad8',
+	password: 'KWHqPtSgvjBo',
 	version: 'v2'
 	});
 
