@@ -8,5 +8,4 @@ applications:
   host: translation-nation
   disk_quota: 1024M
   services:
-  - ClearDB MySQL Database-ik
-  - Language Translation-p7
+  - Language Translation-kq
