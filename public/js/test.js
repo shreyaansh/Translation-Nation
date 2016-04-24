@@ -1,15 +1,4 @@
 function myFunction() {
-	//document.getElementById("translateTo").value = document.getElementById("translateFrom").value;
-
-	//var url = "http://localhost:6002/hello";
-	/*var text = '{ "message":"' + document.getElementById(translateFrom) + '" }';
-	//var obj = JSON.parse(text);
-	
-	var xhr = new XMLHttpRequest();
-	xhr.open("POST", url, true);
-	xhr.setRequestHeader("Content-type", "plain/text");
-	var data = JSON.stringify({"email":"hey@mail.com","password":"101010"});
-	xhr.send("data");*/
 	var lang = "es";
 	
 	if (document.getElementById("option2").checked) {

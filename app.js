@@ -20,13 +20,7 @@ app.set('ip', (process.env.IP || "localhost"));
 
 //Default REST Call for Testing
 app.post('/hello', function(req, res) {
-	//response.send('Hello World!');
 	console.log("It comes here!" + res.statusCode);
-	//console.log(request.body);
-	//response.send(request.body);
-   //console.log(response);
-	console.log(req.body.message);
-   //res.end(JSON.stringify(response));
 	var language_translation = watson.language_translation({
 	username: '82e40ac6-13ce-4548-b3c6-9e714153aac8',
 	password: 'M1LEFR1wsaAH',
@@ -51,8 +45,6 @@ app.get('/hello', function(request, response) {
 	console.log("Hello!");
 	response.send("Hello World");
 });
-
-//Set the actual API Calls here!
 
 var server = app.listen(app.get('port'),app.get('ip'), function() {
   	console.log("Server is listening on port "+app.get('port')+" and ip "+app.get('ip'));
