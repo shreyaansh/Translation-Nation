@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 // parse application/json
 app.use(bodyParser.json())
 
-app.set('port', (process.env.PORT || 6002));
+app.set('port', (process.env.PORT || 6004));
 app.set('ip', (process.env.IP || "localhost"));
 
 //Default REST Call for Testing

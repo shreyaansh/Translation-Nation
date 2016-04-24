@@ -3,10 +3,10 @@
  */
 
 body,html {
-	background-color: #3b4b54; width : 100%;
+	background-image: url("../images/background.png"); width : 100%;
 	height: 100%;
 	margin: 0 auto;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Montserrat";
 	color: #ffffff;
 }
 
@@ -29,7 +29,7 @@ a:hover {
 
 h1 {
 	font-weight: bold;
-	font-size: 2em;
+	font-size: 4em;
 }
 
 .leftHalf {
