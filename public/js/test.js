@@ -1,5 +1,5 @@
 function myFunction() {
-		  document.getElementById("translate").value = "hrlp " + document.getElementById("translate").value;
+		  document.getElementById("translateTo").value = "hrlp " + document.getElementById("translateFrom").value;
 }
 
 
