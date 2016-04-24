@@ -14,8 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
-app.set('port', process.env.PORT || 6004);
-app.set('ip', process.env.IP || "localhost");
+
+app.set('port', process.env.VCAP_APP_PORT || 6004);
+app.set('ip', process.env.VCAP_APP_HOST || "localhost");
 
 //Default REST Call for Testing
 app.post('/hello', function(req, res) {
