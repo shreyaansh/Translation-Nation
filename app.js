@@ -8,6 +8,7 @@ var routes = require('./routes');
 var http = require('http');
 var bodyParser = require('body-parser');
 
+var watson = require('watson-developer-cloud');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
@@ -26,7 +27,23 @@ app.post('/hello', function(req, res) {
    //console.log(response);
 	console.log(req.body.message);
    //res.end(JSON.stringify(response));
-	res.send(req.body.message);
+	var language_translation = watson.language_translation({
+	username: '82e40ac6-13ce-4548-b3c6-9e714153aac8',
+	password: 'M1LEFR1wsaAH',
+	version: 'v2'
+	});
+
+	language_translation.translate({
+		text: req.body.message,
+		source: 'en',
+		target: 'es'
+	}, function(err, translation) {
+	if(err) {
+		console.log(err)
+	} else {
+		res.send(translation.translations[0].translation);
+	}
+	});
 });
 
 app.get('/hello', function(request, response) {
