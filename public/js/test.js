@@ -77,7 +77,7 @@ function myFunction() {
 var url = "http://localhost:6002/hello";
 	var url1= "http://translate-nation.mybluemix.net/hello";
 	console.log(url1);	//var url = "http://localhost:6002/hello";
-	xhr.open("POST", url1, true);
+	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json");
 	xhr.addEventListener("readystatechange", function () {
   		if (this.readyState === 4) {
