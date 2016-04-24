@@ -15,6 +15,8 @@ app.get('/hello', function(request, response) {
 	response.send('Hello World!');
 });
 
+//Set the actual API Calls here!
+
 var server = app.listen(app.get('port'),app.get('ip'), function() {
   	console.log("Server is listening on port "+app.get('port')+" and ip "+app.get('ip'));
 	
