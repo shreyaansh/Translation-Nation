@@ -5,16 +5,14 @@ var app = express();
 app.use(express.static(__dirname + '/public'));
 var appEnv = cfenv.getAppEnv();
 
-var routes = require('./routes');
-var http = require('http');
 var bodyParser = require('body-parser');
 
 var watson = require('watson-developer-cloud');
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 //app.set('port', (process.env.PORT || 6004));
 //app.set('ip', (process.env.IP || "localhost"));
@@ -34,7 +32,7 @@ app.post('/hello', function(req, res) {
 		target: req.body.language
 	}, function(err, translation) {
 	if(err) {
-		console.log(err)
+		console.log(err);
 	} else {
 		console.log(translation);
 		res.send(translation.translations[0].translation);
