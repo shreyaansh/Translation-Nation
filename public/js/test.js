@@ -1,3 +1,5 @@
+/*eslint-env browser */
+/*globals xhr:true */
 function myFunction() {
 	var lang = "es";
 	
