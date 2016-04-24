@@ -36,11 +36,12 @@ app.post('/hello', function(req, res) {
 	language_translation.translate({
 		text: req.body.message,
 		source: 'en',
-		target: 'es'
+		target: req.body.language
 	}, function(err, translation) {
 	if(err) {
 		console.log(err)
 	} else {
+		console.log(translation);
 		res.send(translation.translations[0].translation);
 	}
 	});
