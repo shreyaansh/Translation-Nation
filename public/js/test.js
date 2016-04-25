@@ -73,8 +73,10 @@ b}else for(c=0;c<a.utterances.length;c++)a.utterances[c].volume=b};a.onPartEnd=f
 
 
 
-function myFunction() {
 	var lang = "es";
+	var text = "Hello"
+function myFunction() {
+
 	var in1 = 0;
 	var langfr = "en";
 	var flag = 0;
@@ -147,6 +149,7 @@ function myFunction() {
   		if (this.readyState === 4) {
     		console.log(this.responseText);
 			document.getElementById("translateTo").value = this.responseText;
+			text = this.responseText;
 			if(lang === "es")
 			{
 			responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 0.75});
@@ -170,4 +173,23 @@ function myFunction() {
 	var data = JSON.stringify({"message":document.getElementById("translateFrom").value, "language":lang});
 	console.log(data);
 	xhr.send(data1);
+}
+function myFunction2()
+{
+	if(lang === "es")
+			{
+			responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 0.75});
+  			}
+  			else if(lang === "it")
+  			{
+  			responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 0.75});
+  			}
+  			else if(lang === "fr")
+  			{
+  			 responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 0.75});
+  			}
+  			else
+  			{
+			responsiveVoice.speak(document.getElementById("translateTo").value, "Australian Female", {rate: 1});  				
+  			}
 }
