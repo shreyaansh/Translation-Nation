@@ -161,7 +161,7 @@ function myFunction() {
   			}
   			else
   			{
-			responsiveVoice.speak(document.getElementById("translateTo").value, "US English Female", {rate: 0.75});  				
+			responsiveVoice.speak(document.getElementById("translateTo").value, "UK English Female", {rate: 1.25});  				
   			}
   	}
 	});
