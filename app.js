@@ -22,7 +22,7 @@ app.set('port', process.env.VCAP_APP_PORT || 6002);
 app.set('ip', process.env.VCAP_APP_HOST || "localhost");
 
 //Default REST Call for Testing
-app.post('/hello', function(req, res) {
+app.post('/translate', function(req, res) {
 	console.log("It comes here!" + res.statusCode);
 	var language_translation = watson.language_translation({
 	username: 'e8de384a-58c3-4bae-b2a1-b1324e16b4f0',
@@ -36,8 +36,10 @@ app.post('/hello', function(req, res) {
 		target: req.body.language
 	}, function(err, translation) {
 	if(err) {
+		console.log(err);
 		res.send(req.body.message);
 	} else {
+		console.log(translation);
 		res.send(translation.translations[0].translation);
 	}
 	});
