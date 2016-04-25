@@ -16,30 +16,34 @@
 
 
 	var lang = "es";
+		var flag = 0;
 	//var text = "Hello"
 function myFunction() {
 
 	var in1 = 0;
 	var langfr = "en";
-	var flag = 0;
+
 	
 	if (document.getElementById("option2").checked) {
 		console.log(document.getElementById("option2").value);
 		lang = document.getElementById("option2").value;
 		in1 = 1;
 		console.log(in1);
+		flag=1;
 
 	} 
 	else if (document.getElementById("option3").checked) {
 		console.log(document.getElementById("option3").value);
 		lang = document.getElementById("option3").value;
 		in1 = 1;
+		flag = 2;
 		console.log(in1);
 	}
 	 else if (document.getElementById("option4").checked) {
 		console.log(document.getElementById("option4").value);
 		lang = document.getElementById("option4").value;
 		in1 = 1;
+		flag=3;
 		console.log(in1);
 	}
 	 //if (document.getElementById("option1").checked) {
@@ -47,6 +51,7 @@ function myFunction() {
 		console.log(document.getElementById("option1").value);
 		lang = document.getElementById("option1").value;
 		in1 = 1;
+		flag = 4;
 		console.log(in1);
 	}
 
@@ -56,7 +61,7 @@ function myFunction() {
 		console.log(document.getElementById("option6").value);
 		langfr = document.getElementById("option6").value;
 		console.log(langfr);
-		flag = 1;
+		//lag = ;
 
 	}
 	else if(document.getElementById("option7").checked)
@@ -64,20 +69,20 @@ function myFunction() {
 		console.log(document.getElementById("option7").value);
 		langfr = document.getElementById("option7").value;
 		console.log(langfr);
-		flag = 2;
+		//flag = 2;
 	}
 	else if (document.getElementById("option8").checked) {
 		console.log(document.getElementById("option8").value);
 		langfr = document.getElementById("option8").value;
 		console.log(langfr);
-		flag = 3;
+		//flag = 3;
 	}
 	else
 	{
 		console.log(document.getElementById("option5").value);
 		langfr = document.getElementById("option5").value;
 		console.log(langfr);
-		flag = 4;
+		//flag = 4;
 	}
 }
 
@@ -118,15 +123,15 @@ function myFunction() {
 }
 function myFunction2()
 {
-	if(lang == "es")
+			if(lang === "es")
 			{
 			responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 0.75});
   			}
-  			else if(lang == "it")
+  			else if(lang === "it")
   			{
   			responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 0.75});
   			}
-  			else if(lang == "fr")
+  			else if(lang === "fr")
   			{
   			 responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 0.75});
   			}
