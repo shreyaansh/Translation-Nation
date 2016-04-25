@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Translation-Nation</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../stylesheets/style.css">
+	<script src="../js/test.js"></script>
+	  <script>
+		  function textToSpeech() {
+			  myFunction();
+		  }
+		  function tToSpeech() {
+		  	myFunction2();
+		  }
+	  </script>
+  </head>
+  <body>
+	  <div class="container-fluid">
+	  <div class="jumbotron vertical-center">
+		  <div class="row">
+			  <center>
+			  	<a>
+				  	<div class="col-md-12" onClick="tToSpeech()">
+						<h1>Translation-Nation</h1>
+				  	</div>
+				</a>
+			  </center>
+		  </div>
+		  <div class="row"><div class="col-md-12"></div></div>
+		  <div class="row"><div class="col-md-12" style="height:50px;"></div></div>
+		  <div class="row">
+			  <center>
+				  <div class="col-md-6" style="color:black;">
+					  <div class="form">
+						  <div class="form-group">
+							  <label for="translateFrom" style="color:white;">Translate From:</label>
+							  <div class="btn-group" data-toggle="buttons">
+								  <label class="btn btn-primary active">
+									<input type="radio" name="optionsx" id="option5" autocomplete="off" checked value="en"> English
+								  </label>
+								  <label class="btn btn-primary">
+									<input type="radio" name="optionsx" id="option6" autocomplete="off" value="it"> Italian
+								  </label>
+								  <label class="btn btn-primary">
+									<input type="radio" name="optionsx" id="option7" autocomplete="off" value="fr"> French
+								  </label>
+								  <label class="btn btn-primary">
+									<input type="radio" name="optionsx" id="option8" autocomplete="off" value="es"> Spanish
+								  </label>
+								</div>
+							  <input type="text" class="form-control" id="translateFrom">
+						  </div>
+					  </div>
+				  </div>
+			  </center>
+			  <center>
+				  <div class="col-md-6" style="color:black;">
+					  <div class="form">
+						  <div class="form-group">
+							  <label for="translateTo" style="color:white">Translated To:</label>
+							  	<div class="btn-group" data-toggle="buttons">
+								  <label class="btn btn-primary active">
+									<input type="radio" name="options" id="option1" autocomplete="off" checked value="es"> Spanish
+								  </label>
+								  <label class="btn btn-primary">
+									<input type="radio" name="options" id="option2" autocomplete="off" value="fr"> French
+								  </label>
+								  <label class="btn btn-primary">
+									<input type="radio" name="options" id="option3" autocomplete="off" value="it"> Italian
+								  </label>
+								  <label class="btn btn-primary">
+									<input type="radio" name="options" id="option4" autocomplete="off" value="en"> English
+								  </label>
+								</div>
+							  <input type="text" class="form-control" id="translateTo">
+						  </div>
+					  </div>
+				  </div>
+			  </center>
+		  </div>
+		  <div class="row"><div class="col-md-12"></div></div>
+		  <div class="row"><div class="col-md-12"></div></div>
+		  <div class="row">
+		      <form role="form">
+    <div class="form-group">
+      <label for="sel1">Select fun list (select one):</label>
+      <select class="form-control" id="sel1">
+        <option value="1">Welsh</option>
+        <option value="2">German</option>
+        <option value="3">Russian</option>
+        <option value="4">Thai</option>
+        <option value="5">English US</option>
+        <option value="6">English UK</option>
+        <option value="7">French</option>
+        <option value="8">Australian</option>
+        <option value="9">Spanish</option>
+        <option value="10">Italian</option>
+        <option value="11">Hindi</option>
+        <option value="12">Romanian</option>
+        <option value="13">Arabic</option>
+        <option value="14">Tamil</option>
+        <option value="15">Turkish</option>
+        <option value="16">Greek</option>
+        <option value="17">Norweigian</option>
+        <option value="18">Japanese</option>
+        <option value="19">Korean</option>
+        <option value="20">Chinese</option>
+      </select>
+    </div>
+    </form> 
+			  <center>
+				  <div class="col-md-12" style="color:black;">
+				  	  <button onClick="textToSpeech()" type="button" class="btn btn-primary btn-lg">Translate!</button>
+				  </div>
+				  
+			  </center>
+		  </div>
+		  </div>
+	  </div>
+  </body>
+</html>
