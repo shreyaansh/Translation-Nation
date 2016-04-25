@@ -147,15 +147,15 @@ function myFunction() {
   		if (this.readyState === 4) {
     		console.log(this.responseText);
 			document.getElementById("translateTo").value = this.responseText;
-			if(langfr === "es")
+			if(lang === "es")
 			{
 			responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 1});
   			}
-  			else if(langfr === "it")
+  			else if(lang === "it")
   			{
   			responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 1});
   			}
-  			else if(langfr === "fr")
+  			else if(lang === "fr")
   			{
   			 responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 1});
   			}
