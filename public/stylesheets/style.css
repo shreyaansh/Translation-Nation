@@ -10,6 +10,17 @@ body,html {
 	color: #ffffff;
 }
 
+.vertical-center {
+width: 100%;
+    position: absolute;
+    top: 35%;
+    margin-top: -150px;
+    margin-left: -30px;
+    padding-left: 20px;
+    margin-right: 20px;
+	background-image: url("../images/background.png"); width : 100%;
+}
+
 a {
 	text-decoration: none;
 	color: #00aed1;
