@@ -1,0 +1,45 @@
+body,html {
+	background-image: url("../images/background.png"); width : 100%;
+	height: 100%;
+	margin: 0 auto;
+	font-family: "Montserrat";
+	color: #ffffff;
+}
+
+.main { 
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin-top: -150px;
+    margin-left: -30px;
+    padding-left: 20px;
+    margin-right: 20px;
+	text-align: center;
+    -webkit-animation: fadein 3.5s; -moz-animation: fadein 3.5s; -ms-animation: fadein 3.5s; -o-animation: fadein 3.5s; animation: fadein 3.5s;
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
+#toast{
+	position: fixed;
+	top: 20px;
+	left: 50%;
+	width: 200px;
+	margin-left: -100px;
+	border: 1px solid #666;
+	background-color: #B1BCCF;
+	padding: 10px 0 ;
+	text-align:center;
+	opacity: .9;
+ 
+	/*The good stuff */
+	-webkit-transition: opacity 0.5s ease-out;  /* Saf3.2+, Chrome */
+	-moz-transition: opacity 0.5s ease-out;  /* FF4+ */
+	-ms-transition: opacity 0.5s ease-out;  /* IE10? */
+	-o-transition: opacity 0.5s ease-out;  /* Opera 10.5+ */
+	transition: opacity 0.5s ease-out;	
+ 
+}
