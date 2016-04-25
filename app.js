@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 
-app.set('port', process.env.VCAP_APP_PORT || 6004);
+app.set('port', process.env.VCAP_APP_PORT || 6002);
 app.set('ip', process.env.VCAP_APP_HOST || "localhost");
 
 //Default REST Call for Testing
