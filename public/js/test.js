@@ -150,7 +150,7 @@ function myFunction() {
     		console.log(this.responseText);
 			document.getElementById("translateTo").value = this.responseText;
 			text = this.responseText;
-			if(lang === "es")
+			/*if(lang === "es")
 			{
 			responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 0.75});
   			}
@@ -165,7 +165,7 @@ function myFunction() {
   			else
   			{
 			responsiveVoice.speak(document.getElementById("translateTo").value, "Australian Female", {rate: 1});  				
-  			}
+  			}*/
   	}
 	});
 	var data1 = JSON.stringify({"message":document.getElementById("translateFrom").value, "langfrom":langfr,"language":lang});
