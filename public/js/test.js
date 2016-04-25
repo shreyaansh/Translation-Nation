@@ -149,19 +149,19 @@ function myFunction() {
 			document.getElementById("translateTo").value = this.responseText;
 			if(lang === "es")
 			{
-			responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 1});
+			responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 0.75});
   			}
   			else if(lang === "it")
   			{
-  			responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 1});
+  			responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 0.75});
   			}
   			else if(lang === "fr")
   			{
-  			 responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 1});
+  			 responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 0.75});
   			}
   			else
   			{
-			responsiveVoice.speak(document.getElementById("translateTo").value, "US English Female", {rate: 1});  				
+			responsiveVoice.speak(document.getElementById("translateTo").value, "UK English Female", {rate: 1});  				
   			}
   	}
 	});
