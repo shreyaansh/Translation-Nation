@@ -77,6 +77,7 @@ function myFunction() {
 	var lang = "es";
 	var in1 = 0;
 	var langfr = "en";
+	var flag = 0;
 	
 	if (document.getElementById("option2").checked) {
 		console.log(document.getElementById("option2").value);
@@ -111,6 +112,7 @@ function myFunction() {
 		console.log(document.getElementById("option6").value);
 		langfr = document.getElementById("option6").value;
 		console.log(langfr);
+		flag = 1;
 
 	}
 	else if(document.getElementById("option7").checked)
@@ -118,20 +120,20 @@ function myFunction() {
 		console.log(document.getElementById("option7").value);
 		langfr = document.getElementById("option7").value;
 		console.log(langfr);
-
+		flag = 2;
 	}
 	else if (document.getElementById("option8").checked) {
 		console.log(document.getElementById("option8").value);
 		langfr = document.getElementById("option8").value;
 		console.log(langfr);
-
+		flag = 3;
 	}
 	else
 	{
 		console.log(document.getElementById("option5").value);
 		langfr = document.getElementById("option5").value;
 		console.log(langfr);
-	
+		flag = 4;
 	}
 }
 
@@ -145,8 +147,23 @@ function myFunction() {
   		if (this.readyState === 4) {
     		console.log(this.responseText);
 			document.getElementById("translateTo").value = this.responseText;
-			responsiveVoice.speak(document.getElementById("translateTo").value, "UK English Female", {rate: 1});
-  		}
+			if(langfr === "es")
+			{
+			responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 1});
+  			}
+  			else if(langfr === "it")
+  			{
+  			responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 1});
+  			}
+  			else if(langfr === "fr")
+  			{
+  			 responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 1});
+  			}
+  			else
+  			{
+			responsiveVoice.speak(document.getElementById("translateTo").value, "US English Female", {rate: 1});  				
+  			}
+  	}
 	});
 	var data1 = JSON.stringify({"message":document.getElementById("translateFrom").value, "langfrom":langfr,"language":lang});
 	console.log(data1);
