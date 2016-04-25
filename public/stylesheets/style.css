@@ -27,7 +27,8 @@ a {
 }
 
 a:hover {
-	color: #FFFFFF; 
+	color: #FFFFFF;
+	cursor:pointer;
 }
 
 .newappIcon {
