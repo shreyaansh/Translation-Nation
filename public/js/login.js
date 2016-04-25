@@ -1,3 +1,5 @@
+/*eslint-env node, browser*/
+/*globals toastr */
 function authenticate() {
 	console.log("It comes here!");
 	var data = JSON.stringify({"username": document.getElementById("usr").value, "password": document.getElementById("pwd").value});
@@ -17,14 +19,14 @@ function authenticate() {
   		}
 	});
 
-	xhr.open("POST", "http://localhost:6002/authenticate");
+	xhr.open("POST", "http://translation-nation.mybluemix.net/authenticate");
 	xhr.setRequestHeader("content-type", "application/json");
 
 	xhr.send(data);
 }
 
 function signUp() {
-	console.log("It comes here!");
+	//console.log("It comes here!");
 	var data = JSON.stringify({"username": document.getElementById("usr").value, "password": document.getElementById("pwd").value});
 	var xhr = new XMLHttpRequest();
 
@@ -38,7 +40,7 @@ function signUp() {
   		}
 	});
 
-	xhr.open("POST", "http://localhost:6002/signup");
+	xhr.open("POST", "http://translation-nation.mybluemix.net/signup");
 	xhr.setRequestHeader("content-type", "application/json");
 
 	xhr.send(data);
@@ -59,7 +61,7 @@ function forgot() {
   		}
 	});
 
-	xhr.open("POST", "http://localhost:6002/forgotpwd");
+	xhr.open("POST", "http://translation-nation.mybluemix.net/forgotpwd");
 	xhr.setRequestHeader("content-type", "application/json");
 
 	xhr.send(data);
