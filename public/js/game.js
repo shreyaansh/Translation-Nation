@@ -47,15 +47,6 @@ function getText() {
 	xhr.addEventListener("readystatechange", function() {
 		if (this.readyState === 4) {
 			console.log(this.responseText);
-			if (typeof this.responseText === 'object') {
-				console.log('It is!');
-			} else {
-				console.log('It isn\'t');
-				var yolo = this.responseText;
-				console.log(yolo.translated);
-				var data = JSON.stringify(this.responseText);
-				console.log(data.translated);
-			}
 			//Add checks for errors later on
 		}
 	});
