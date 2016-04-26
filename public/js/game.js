@@ -2,7 +2,7 @@
 /*globals toastr */
 
 var get;
-var score;
+var score = 0;
 var language = 'es';
 
 //function myFunction() {
@@ -71,8 +71,11 @@ function checkIt() {
 	if (document.getElementById('answer').value) {
 		if (answer == original) {
 			toastr.success('Correct!');
+			score=score+1;
+			console.log(score);
 		} else {
 			toastr.error('Incorrect, please try again!');
+			score=0;
 			console.log('Please try again!');
 		}
 	}
