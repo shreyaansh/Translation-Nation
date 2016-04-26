@@ -197,7 +197,7 @@ app.post('/generaterandom', function(req, res) {
 			res.send(req.body.message);
 		} else {
 			console.log(translation);
-			var data = JSON.stringify({'original': word, 'translated', translation.translations[0].translation});
+			var data = '{original:' + word + ', translated: ' +  translation.translations[0].translation + '}';
 			res.send(data);
 		}
 	});
