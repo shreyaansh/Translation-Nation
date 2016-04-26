@@ -5,86 +5,10 @@
 var lang = "es";
 var flag = 0;
 function myFunction() {
-
 	var in1 = 0;
 	var langfr = "en";
 
 	myFunction3();
-	/*if (document.getElementById("option2").checked) {
-		console.log(document.getElementById("option2").value);
-		lang = document.getElementById("option2").value;
-		in1 = 1;
-		console.log(in1);
-		flag=1;
-
-	} 
-	else if (document.getElementById("option3").checked) {
-		console.log(document.getElementById("option3").value);
-		lang = document.getElementById("option3").value;
-		in1 = 1;
-		flag = 2;
-		console.log(in1);
-	}
-	 else if (document.getElementById("option4").checked) {
-		console.log(document.getElementById("option4").value);
-		lang = document.getElementById("option4").value;
-		in1 = 1;
-		flag=3;
-		console.log(in1);
-	}
-	else {
-		console.log(document.getElementById("option1").value);
-		lang = document.getElementById("option1").value;
-		in1 = 1;
-		flag = 4;
-		console.log(in1);
-	}
-
-	if(in1)
-	{
-	if (document.getElementById("option6").checked) {
-		console.log(document.getElementById("option6").value);
-		langfr = document.getElementById("option6").value;
-		console.log(langfr);
-
-	}
-	else if(document.getElementById("option7").checked)
-	{
-		console.log(document.getElementById("option7").value);
-		langfr = document.getElementById("option7").value;
-		console.log(langfr);
-	}
-	else if (document.getElementById("option8").checked) {
-		console.log(document.getElementById("option8").value);
-		langfr = document.getElementById("option8").value;
-		console.log(langfr);
-	}
-	else
-	{
-		console.log(document.getElementById("option5").value);
-		langfr = document.getElementById("option5").value;
-		console.log(langfr);
-	}
-}
-
-	xhr = new XMLHttpRequest();
-	var url = "http://localhost:6002/translate";
-	//var url= "http://translation-nation.mybluemix.net/translate";
-	console.log(url);	//var url = "http://localhost:6002/hello";
-	xhr.open("POST", url, true);
-	xhr.setRequestHeader("Content-type", "application/json");
-	xhr.addEventListener("readystatechange", function () {
-  		if (this.readyState === 4) {
-    		console.log(this.responseText);
-			document.getElementById("translateTo").value = this.responseText;
-            myFunction3();
-  	}
-	});
-	var data1 = JSON.stringify({"message":document.getElementById("translateFrom").value, "langfrom":langfr,"language":lang});
-	console.log(data1);
-	//var data = JSON.stringify({"message":document.getElementById("translateFrom").value, "language":lang});
-	//console.log(data);
-	xhr.send(data1);*/
 }
 
 function myFunction2() {
@@ -148,7 +72,6 @@ function myFunction3() {
 }
 
 function hello() {
-	//localStorage.setItem('username', 'help');
 	var username = localStorage.getItem('username');
 	console.log(username);
 	document.getElementById('user').innerHTML = '<a href="#"><span class="glyphicon glyphicon-user"></span> ' + username + '</a>';
