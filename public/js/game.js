@@ -1,4 +1,5 @@
 /*eslint-env browser */
+/*globals toastr */
 function myFunction() {
 	document.getElementById("game").innerHTML = "Hello";
 	/*var lang = "es";
