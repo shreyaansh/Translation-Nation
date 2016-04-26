@@ -51,6 +51,8 @@ function getText() {
 				console.log('It is!');
 			} else {
 				console.log('It isn\'t');
+				var data = JSON.stringify(this.response);
+				console.log(data.translated);
 			}
 			//Add checks for errors later on
 		}
