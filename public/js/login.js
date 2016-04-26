@@ -67,7 +67,3 @@ function forgot() {
 
 	xhr.send(data);
 }
-
-function sex() {
-	localStorage('username', 'help');
-}
