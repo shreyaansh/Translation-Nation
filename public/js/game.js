@@ -96,12 +96,13 @@ function bodyLoad() {
   		if (this.readyState === 4) {
     		console.log(this.responseText);
 			if (this.responseText) {
-				//toastr.success('Got the scores');
+				toastr.success('Got the scores');
 				score = this.responseText;
+				console.log(score);
 				console.log(typeof this.responseText);
 				console.log("score got", this.responseText);
 			} else {
-				//toastr.error('Couldn\'t get the scores');
+				toastr.error('Couldn\'t get the scores');
 			}
 			//var score = this.responseText;
   		}
