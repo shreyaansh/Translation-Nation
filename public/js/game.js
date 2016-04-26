@@ -1,3 +1,4 @@
+/*eslint-env browser */
 function myFunction() {
 	document.getElementById("game").innerHTML = "Hello";
 	/*var lang = "es";
@@ -105,7 +106,7 @@ function bodyLoad() {
   		}
 	});
 
-	xhr.open("POST", "http://localhost:6002/getscore");
+	xhr.open("POST", "http://translation-nation.mybluemix.net/getscore");
 	xhr.setRequestHeader("content-type", "application/json");
 
 	xhr.send(data);

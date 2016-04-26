@@ -52,6 +52,7 @@ app.post('/translate', function(req, res) {
 
 
 app.get('/hello', function(request, response) {
+	console.log(request);
 	console.log("Hello!");
 	response.send("Hello World");
 });
@@ -160,10 +161,10 @@ app.post('/getscore', function(req, res) {
 
 	var score = "-1";
 	
-	if (req.body.username != null) {
+	if (req.body.username !== null) {
 	new Firebase(url).once('value', function(snap) {
 		console.log('I fetched a user!', snap.val());
-		if (typeof snap.val() == 'object') {
+		if (typeof snap.val() === 'object') {
 			console.log('It is an object!');
 			console.log(snap.val().highscore);
 			score = snap.val().highscore.toString();
