@@ -147,5 +147,7 @@ function myFunction3() {
 }
 
 function hello() {
-	//localStorage.setItem('username', 'help');
+	var username = localStorage.getItem('username');
+	console.log(username);
+	document.getElementById('user').innerHTML = '<a href="#"><span class="glyphicon glyphicon-user"></span> ' + username + '</a>';
 }
