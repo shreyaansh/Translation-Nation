@@ -10,11 +10,12 @@ function authenticate() {
     		console.log(this.responseText);
 			if (this.responseText === "") {
 				//toastr.success('Signed In!');
-				toastr.error('Could Sign in. Incorrect Email or Password');
+				toastr.error('Could\'nt Sign in. Incorrect Email or Password');
 			} else {
 				//toastr.error('Could Sign in. Incorrect Email or Password');
 				toastr.success('Signed In!');
 				localStorage.setItem('username', this.responseText);
+				window.location = "/translate/index.html";
 			}
   		}
 	});
