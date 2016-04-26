@@ -58,7 +58,7 @@ function getText() {
 		}
 	});
 	
-	xhr.open("POST", "http://localhost:6002/generaterandom");
+	xhr.open("POST", "http://translation-nation.mybluemix.net/generaterandom");
 	xhr.setRequestHeader("content-type", "application/json");
 	
 	xhr.send(data);
