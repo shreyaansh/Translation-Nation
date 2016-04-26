@@ -101,10 +101,10 @@ function bodyLoad() {
 				console.log(score);
 				console.log(typeof this.responseText);
 				console.log("score got", this.responseText);
+				initScores();
 			} else {
 				toastr.error('Couldn\'t get the scores');
 			}
-			//var score = this.responseText;
   		}
 	});
 
@@ -112,7 +112,9 @@ function bodyLoad() {
 	xhr.setRequestHeader("content-type", "application/json");
 
 	xhr.send(data);
-	
+}
+
+function initScores() {
 	document.getElementById("game").innerHTML = "User is: " + get + " <br> " + "Highscore for the user is: " + score;
 	
 	document.getElementById("currentScore").innerHTML = "Current score is: 0";
