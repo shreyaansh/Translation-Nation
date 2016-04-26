@@ -31,7 +31,7 @@ function signUp() {
 	var data = JSON.stringify({"username": document.getElementById("usr").value, "password": document.getElementById("pwd").value});
 	var xhr = new XMLHttpRequest();
 
-	xhr.addEventListener("readystatechange", function () {
+	xhr.addEventListener("readystatechange", function ({
   		if (this.readyState === 4) {
 			console.log(this.responseText);
 			if (this.responseText === "success")

@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
 app.use(bodyParser.json());
 
+var randomWords = require('random-words');
 
 var Firebase = require("firebase");
 
@@ -179,6 +180,10 @@ app.post('/getscore', function(req, res) {
 	}
 	
 	console.log("The high score is:", score);
+});
+
+app.post('/generaterandom', function(req, res) {
+	console.log('It comes here!');
 });
 
 //module.exports = app;

@@ -22,13 +22,35 @@
 	  </script>
   </head>
   <body>
+	  <nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			  </button>
+			  <a class="navbar-brand" href="#">TranslationNation</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Practice</a></li>
+				<li class="active"><a href="#">Accents</a></li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				  <li><a href="#"><span class="glyphicon glyphicon-user"></span> User</a></li>
+				<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
 	  <div class="container-fluid">
-	  <div class="jumbotron vertical-center">
 		  <div class="row">
 			  <center>
 			  	<a>
 				  	<div class="col-md-12" onClick="tToSpeech()">
-						<h1>Translation-Nation</h1>
+						<h2>TranslationNation</h2>
 				  	</div>
 				</a>
 			  </center>
@@ -55,6 +77,8 @@
 									<input type="radio" name="optionsx" id="option8" autocomplete="off" value="es"> Spanish
 								  </label>
 								</div>
+							  <br>
+							  <br>
 							  <input type="text" class="form-control" id="translateFrom">
 						  </div>
 					  </div>
@@ -79,6 +103,8 @@
 									<input type="radio" name="options" id="option4" autocomplete="off" value="en"> English
 								  </label>
 								</div>
+							  <br>
+							  <br>
 							  <input type="text" class="form-control" id="translateTo">
 						  </div>
 					  </div>
@@ -89,8 +115,8 @@
 		  <div class="row"><div class="col-md-12"></div></div>
 		  <div class="row">
 		      <form role="form">
-    <div class="form-group">
-      <label for="sel1">Select fun list (select one):</label>
+    <div class="col-xs-5">
+      <label for="sel1">Select Accent :</label>
       <select class="form-control" id="sel1">
         <option value="1">Welsh</option>
         <option value="2">German</option>
@@ -121,7 +147,6 @@
 				  </div>
 				  
 			  </center>
-		  </div>
 		  </div>
 	  </div>
   </body>
