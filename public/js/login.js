@@ -15,7 +15,7 @@ function authenticate() {
 				//toastr.error('Could Sign in. Incorrect Email or Password');
 				toastr.success('Signed In!');
 				localStorage.setItem('username', this.responseText);
-				window.location = "/translate/index.html";
+				setTimeout(window.location = "/translate/index.html", 2000);
 			}
   		}
 	});
