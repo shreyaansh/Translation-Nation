@@ -68,7 +68,6 @@ var authenticated = false;
 var username = null;
 
 app.post('/authenticate', function(req, res) {
-	//res.send("This comes here: " + req.body.username + req.body.password);
 	console.log(req.body.username);
 	
 	username = req.body.username;
@@ -163,18 +162,18 @@ app.post('/getscore', function(req, res) {
 	var score = "-1";
 	
 	if (req.body.username !== null) {
-	new Firebase(url).once('value', function(snap) {
-		console.log('I fetched a user!', snap.val());
-		if (typeof snap.val() === 'object') {
-			console.log('It is an object!');
-			console.log(snap.val().highscore);
-			score = snap.val().highscore.toString();
-			console.log("String score:", score);
-			res.send(score);
-		} else {
-			console.log('It\'s not an object!');
-		}
-	});
+		new Firebase(url).once('value', function(snap) {
+			console.log('I fetched a user!', snap.val());
+			if (typeof snap.val() === 'object') {
+				console.log('It is an object!');
+				console.log(snap.val().highscore);
+				score = snap.val().highscore.toString();
+				console.log("String score:", score);
+				res.send(score);
+			} else {
+				console.log('It\'s not an object!');
+			}
+		});
 	} else {
 		console.log("Came here!");
 	}
@@ -186,7 +185,7 @@ app.post('/generaterandom', function(req, res) {
 	console.log('It comes here!');
 	console.log('The request is:', req);
 	var word = randomWords();
-	res.send(word);
+	res.send(req.body.languageTo);
 });
 
 //module.exports = app;
