@@ -187,7 +187,20 @@ app.post('/generaterandom', function(req, res) {
 	console.log('The request is:', req);
 	var word = randomWords();
 	//res.send(req.body.languageTo);
-	
+	language_translation.translate({
+		text: word,
+		source: 'en',
+		target: req.body.languageTo
+	}, function(err, translation) {
+		if(err) {
+			console.log(err);
+			res.send(req.body.message);
+		} else {
+			console.log(translation);
+			var data = JSON.stringify({'original': word, 'translated', translation.translations[0].translation});
+			res.send(data);
+		}
+	});
 });
 
 //module.exports = app;
