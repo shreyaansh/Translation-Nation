@@ -53,7 +53,7 @@ function getText() {
 				console.log('It isn\'t');
 				var yolo = this.responseText;
 				console.log(yolo.translated);
-				var data = JSON.stringify(this.resoponseText);
+				var data = JSON.stringify(this.responseText);
 				console.log(data.translated);
 			}
 			//Add checks for errors later on
