@@ -5,9 +5,9 @@ var get;
 var score;
 var language = 'es';
 
-function myFunction() {
+//function myFunction() {
 	//document.getElementById("game").innerHTML = "Hello";
-}
+//}
 
 function bodyLoad() {
 	//Select the language first
@@ -33,9 +33,9 @@ function selectLanguage() {
 	}
 }
 
-function updateWord() {
-	
-}
+//function updateWord() {
+//	
+//}
 
 function init() {
 	//Get the username from the previous page using session storage
