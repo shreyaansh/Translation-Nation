@@ -68,8 +68,9 @@ function myFunction() {
 }
 
 	xhr = new XMLHttpRequest();
+	//var url = "http://localhost:6002/translate";
 	var url= "http://translation-nation.mybluemix.net/translate";
-	console.log(url);
+	console.log(url);	//var url = "http://localhost:6002/hello";
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json");
 	xhr.addEventListener("readystatechange", function () {
@@ -80,6 +81,8 @@ function myFunction() {
 	});
 	var data1 = JSON.stringify({"message":document.getElementById("translateFrom").value, "langfrom":langfr,"language":lang});
 	console.log(data1);
+	//var data = JSON.stringify({"message":document.getElementById("translateFrom").value, "language":lang});
+	//console.log(data);
 	xhr.send(data1);
 }
 
@@ -144,7 +147,5 @@ function myFunction3() {
 }
 
 function hello() {
-	var username = localStorage.getItem('username');
-	console.log(username);
-	document.getElementById('user').innerHTML = '<a href="#"><span class="glyphicon glyphicon-user"></span> ' + username + '</a>';
+	//localStorage.setItem('username', 'help');
 }
