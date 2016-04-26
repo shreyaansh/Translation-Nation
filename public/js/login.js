@@ -24,6 +24,8 @@ function authenticate() {
 	xhr.setRequestHeader("content-type", "application/json");
 
 	xhr.send(data);
+	
+	
 }
 
 function signUp() {
