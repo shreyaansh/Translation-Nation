@@ -1,5 +1,9 @@
 /*eslint-env browser */
 /*globals toastr */
+
+var get;
+var score;
+
 function myFunction() {
 	document.getElementById("game").innerHTML = "Hello";
 	/*var lang = "es";
@@ -85,10 +89,10 @@ function myFunction() {
 function bodyLoad() {
 	//Get the username from the previous page using session storage
 	//sessionStorage.setItem('user', 'help');
-	var get = localStorage.getItem('username');
+	get = localStorage.getItem('username');
 	//var get = ;
 	
-	var score = -1;
+	score = -1;
 	//Have to do a firebase request to get the scores:
 	var data = JSON.stringify({"username": get});
 
