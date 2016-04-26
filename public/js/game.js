@@ -14,7 +14,7 @@ function bodyLoad() {
 	var username = localStorage.getItem('username');
 	console.log(username);
 	document.getElementById('user').innerHTML = '<a href="#"><span class="glyphicon glyphicon-user"></span> ' + username + '</a>';
-	
+
 	//Select the language first
 	selectLanguage();
 	//Call init to get the scores of the user
