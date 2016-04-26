@@ -36,7 +36,9 @@ function selectLanguage() {
 //function updateWord() {
 //	
 //}
-
+var original;
+var translated;
+var userInput;
 function getText() {
 	selectLanguage();
 	
@@ -47,14 +49,33 @@ function getText() {
 	xhr.addEventListener("readystatechange", function() {
 		if (this.readyState === 4) {
 			console.log(this.responseText);
-			//Add checks for errors later on
+			var data = JSON.parse(this.responseText);
+			original = data.original;
+			translated = data.translated;
+			console.log(original);
+			console.log(translated);
+			document.getElementById('randomtext').innerHTML = translated;
 		}
 	});
 	
-	xhr.open("POST", "http://translation-nation.mybluemix.net/generaterandom");
+	xhr.open("POST", "http://localhost:6002/generaterandom");
 	xhr.setRequestHeader("content-type", "application/json");
 	
 	xhr.send(data);
+}
+
+function checkIt() {
+	console.log(document.getElementById('answer').value);
+	console.log(original);
+	var answer = document.getElementById('answer').value;
+	if (document.getElementById('answer').value) {
+		if (answer == original) {
+			toastr.success('Correct!');
+		} else {
+			toastr.error('Incorrect, please try again!');
+			console.log('Please try again!');
+		}
+	}
 }
 
 function init() {
