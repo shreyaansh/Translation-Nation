@@ -87,7 +87,7 @@ function bodyLoad() {
 	var get = localStorage.getItem('username');
 	//var get = ;
 	
-	var score = "-1";
+	var score = -1;
 	//Have to do a firebase request to get the scores:
 	var data = JSON.stringify({"username": get});
 
@@ -98,6 +98,7 @@ function bodyLoad() {
 			if (this.responseText) {
 				//toastr.success('Got the scores');
 				score = this.responseText;
+				console.log(typeof this.responseText);
 				console.log("score got", this.responseText);
 			} else {
 				//toastr.error('Couldn\'t get the scores');
