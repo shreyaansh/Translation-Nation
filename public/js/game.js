@@ -104,6 +104,7 @@ function init() {
 	});
 
 	xhr.open("POST", "http://translation-nation.mybluemix.net/getscore");
+	
 	xhr.setRequestHeader("content-type", "application/json");
 
 	xhr.send(data);
