@@ -47,6 +47,9 @@ function getText() {
 	xhr.addEventListener("readystatechange", function() {
 		if (this.readyState === 4) {
 			console.log(this.responseText);
+            console.log(this.responseText.original);
+            console.log(this.responseText[0].original);
+            console.log(this.responseText[0]);
 			//Add checks for errors later on
 		}
 	});
