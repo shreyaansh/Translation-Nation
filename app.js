@@ -26,14 +26,15 @@ var mref = new Firebase("https://translation-nation.firebaseio.com/");
 app.set('port', process.env.VCAP_APP_PORT || 6002);
 app.set('ip', process.env.VCAP_APP_HOST || "localhost");
 
-//Default REST Call for Testing
-app.post('/translate', function(req, res) {
-	console.log("It comes here!" + res.statusCode);
-	var language_translation = watson.language_translation({
+var language_translation = watson.language_translation({
 	username: 'e8de384a-58c3-4bae-b2a1-b1324e16b4f0',
 	password: 'ndpc66DLERye',
 	version: 'v2'
-	});
+});
+
+//Default REST Call for Testing
+app.post('/translate', function(req, res) {
+	console.log("It comes here!" + res.statusCode);
 
 	language_translation.translate({
 		text: req.body.message,
@@ -185,7 +186,8 @@ app.post('/generaterandom', function(req, res) {
 	console.log('It comes here!');
 	console.log('The request is:', req);
 	var word = randomWords();
-	res.send(req.body.languageTo);
+	//res.send(req.body.languageTo);
+	
 });
 
 //module.exports = app;
