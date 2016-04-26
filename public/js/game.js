@@ -47,6 +47,12 @@ function getText() {
 	xhr.addEventListener("readystatechange", function() {
 		if (this.readyState === 4) {
 			console.log(this.responseText);
+			if (typeof this.responseText === 'object') {
+				console.log('It is!');
+				
+			} else {
+				console.log('It isn\'t');
+			}
 			//Add checks for errors later on
 		}
 	});
