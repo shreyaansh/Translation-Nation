@@ -35,7 +35,7 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  <ul class="nav navbar-nav">
-				<li><a href="../index.html">Home</a></li>
+				<li><a href="../translate/">Home</a></li>
 				<li class="active"><a href="#">Practice</a></li>
 				<li><a href="../accents/">Accents</a></li>
 			  </ul>
@@ -51,7 +51,26 @@
 		  	<div class="row">
 				<center>
 					<h2>Practice</h2>
-					<div class="jumbotron" style="background:none;"></div>
+					<div class="jumbotron" style="">
+						<div class="btn-group" data-toggle="buttons">
+							<label class="btn btn-primary active">
+								<input type="radio" name="optionsx" id="es" autocomplete="off" checked value="es"> Spanish
+							</label>
+							<label class="btn btn-primary">
+								<input type="radio" name="optionsx" id="fr" autocomplete="off" value="fr"> French
+							</label>
+							<label class="btn btn-primary">
+								<input type="radio" name="optionsx" id="it" autocomplete="off" value="it"> Italian
+							</label>
+						</div>
+						<br>
+						<br>
+						<div class="random" id="randomtext" style="font-size:24px; color:black;">Hello</div>
+						<br>
+						<input type="text" class="form-control" id="translateFrom">
+						<br>
+					</div>
+					<button onClick="getText()" type="button" class="btn btn-primary btn-lg">Check!</button>
 				</center>
 			</div>
 		</div>

@@ -37,6 +37,26 @@ function selectLanguage() {
 //	
 //}
 
+function getText() {
+	selectLanguage();
+	
+	//Now make an API call to get a random translated word
+	console.log("languageTo is", language);
+	var data = JSON.stringify({"languageTo":language});
+	var xhr = new XMLHttpRequest();
+	xhr.addEventListener("readystatechange", function() {
+		if (this.readyState === 4) {
+			console.log(this.responseText);
+			//Add checks for errors later on
+		}
+	});
+	
+	xhr.open("POST", "http://translation-nation.mybluemix.net/generaterandom");
+	xhr.setRequestHeader("content-type", "application/json");
+	
+	xhr.send(data);
+}
+
 function init() {
 	//Get the username from the previous page using session storage
 	get = localStorage.getItem('username');
