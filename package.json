@@ -10,6 +10,7 @@
     "cfenv": "1.0.x",
     "express": "4.13.x",
     "firebase": "^2.4.2",
+    "random-words": "0.0.1",
     "watson-developer-cloud": "^1.4.1"
   },
   "repository": {},
