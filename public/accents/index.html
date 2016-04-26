@@ -11,7 +11,7 @@
   <script src="http://code.responsivevoice.org/responsivevoice.js"></script>
   <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="../stylesheets/style.css">
-	<script src="../js/test.js"></script>
+	<script src="../accents.js"></script>
 	  <script>
 		  function textToSpeech() {
 			  myFunction();
@@ -59,63 +59,23 @@
 		  <div class="row"><div class="col-md-12" style="height:50px;"></div></div>
 		  <div class="row">
 			  <center>
-				  <div class="col-md-6" style="color:black;">
 					  <div class="form">
 						  <div class="form-group">
-							  <label for="translateFrom" style="color:white;">Translate From:</label>
-							  <div class="btn-group" data-toggle="buttons">
-								  <label class="btn btn-primary active">
-									<input type="radio" name="optionsx" id="option5" autocomplete="off" checked value="en"> English
-								  </label>
-								  <label class="btn btn-primary">
-									<input type="radio" name="optionsx" id="option6" autocomplete="off" value="it"> Italian
-								  </label>
-								  <label class="btn btn-primary">
-									<input type="radio" name="optionsx" id="option7" autocomplete="off" value="fr"> French
-								  </label>
-								  <label class="btn btn-primary">
-									<input type="radio" name="optionsx" id="option8" autocomplete="off" value="es"> Spanish
-								  </label>
-								</div>
+							  <label for="translateFrom" style="color:white;">Text To Translate:</label>
+							   
 							  <br>
 							  <br>
 							  <input type="text" class="form-control" id="translateFrom">
 						  </div>
 					  </div>
-				  </div>
 			  </center>
-			  <center>
-				  <div class="col-md-6" style="color:black;">
-					  <div class="form">
-						  <div class="form-group">
-							  <label for="translateTo" style="color:white">Translated To:</label>
-							  	<div class="btn-group" data-toggle="buttons">
-								  <label class="btn btn-primary active">
-									<input type="radio" name="options" id="option1" autocomplete="off" checked value="es"> Spanish
-								  </label>
-								  <label class="btn btn-primary">
-									<input type="radio" name="options" id="option2" autocomplete="off" value="fr"> French
-								  </label>
-								  <label class="btn btn-primary">
-									<input type="radio" name="options" id="option3" autocomplete="off" value="it"> Italian
-								  </label>
-								  <label class="btn btn-primary">
-									<input type="radio" name="options" id="option4" autocomplete="off" value="en"> English
-								  </label>
-								</div>
-							  <br>
-							  <br>
-							  <input type="text" class="form-control" id="translateTo">
-						  </div>
-					  </div>
-				  </div>
-			  </center>
+			 
 		  </div>
 		  <div class="row"><div class="col-md-12"></div></div>
 		  <div class="row"><div class="col-md-12"></div></div>
 		  <div class="row">
 		      <form role="form">
-    <div class="col-xs-5">
+    <div class="col-md-12">
       <label for="sel1">Select Accent :</label>
       <select class="form-control" id="sel1">
         <option value="1">Welsh</option>
@@ -140,10 +100,13 @@
         <option value="20">Chinese</option>
       </select>
     </div>
+                  
     </form> 
+              
 			  <center>
 				  <div class="col-md-12" style="color:black;">
-				  	  <button onClick="textToSpeech()" type="button" class="btn btn-primary btn-lg">Translate!</button>
+                      <br>
+				  	  <button onClick="textToSpeech()" type="button" class="btn btn-primary btn-lg">Speak!</button>
 				  </div>
 				  
 			  </center>

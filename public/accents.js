@@ -1,0 +1,152 @@
+/*eslint-env browser */
+/*globals xhr:true responsiveVoice*/
+
+
+var lang = "es";
+var flag = 0;
+function myFunction() {
+
+	var in1 = 0;
+	var langfr = "en";
+
+	myFunction3();
+	/*if (document.getElementById("option2").checked) {
+		console.log(document.getElementById("option2").value);
+		lang = document.getElementById("option2").value;
+		in1 = 1;
+		console.log(in1);
+		flag=1;
+
+	} 
+	else if (document.getElementById("option3").checked) {
+		console.log(document.getElementById("option3").value);
+		lang = document.getElementById("option3").value;
+		in1 = 1;
+		flag = 2;
+		console.log(in1);
+	}
+	 else if (document.getElementById("option4").checked) {
+		console.log(document.getElementById("option4").value);
+		lang = document.getElementById("option4").value;
+		in1 = 1;
+		flag=3;
+		console.log(in1);
+	}
+	else {
+		console.log(document.getElementById("option1").value);
+		lang = document.getElementById("option1").value;
+		in1 = 1;
+		flag = 4;
+		console.log(in1);
+	}
+
+	if(in1)
+	{
+	if (document.getElementById("option6").checked) {
+		console.log(document.getElementById("option6").value);
+		langfr = document.getElementById("option6").value;
+		console.log(langfr);
+
+	}
+	else if(document.getElementById("option7").checked)
+	{
+		console.log(document.getElementById("option7").value);
+		langfr = document.getElementById("option7").value;
+		console.log(langfr);
+	}
+	else if (document.getElementById("option8").checked) {
+		console.log(document.getElementById("option8").value);
+		langfr = document.getElementById("option8").value;
+		console.log(langfr);
+	}
+	else
+	{
+		console.log(document.getElementById("option5").value);
+		langfr = document.getElementById("option5").value;
+		console.log(langfr);
+	}
+}
+
+	xhr = new XMLHttpRequest();
+	var url = "http://localhost:6002/translate";
+	//var url= "http://translation-nation.mybluemix.net/translate";
+	console.log(url);	//var url = "http://localhost:6002/hello";
+	xhr.open("POST", url, true);
+	xhr.setRequestHeader("Content-type", "application/json");
+	xhr.addEventListener("readystatechange", function () {
+  		if (this.readyState === 4) {
+    		console.log(this.responseText);
+			document.getElementById("translateTo").value = this.responseText;
+            myFunction3();
+  	}
+	});
+	var data1 = JSON.stringify({"message":document.getElementById("translateFrom").value, "langfrom":langfr,"language":lang});
+	console.log(data1);
+	//var data = JSON.stringify({"message":document.getElementById("translateFrom").value, "language":lang});
+	//console.log(data);
+	xhr.send(data1);*/
+}
+
+function myFunction2() {
+			if(lang === "es") {
+				responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 0.75});
+  			} else if(lang === "it") {
+  				responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 0.75});
+  			} else if(lang === "fr") {
+  				responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 0.75});
+  			} else {
+				responsiveVoice.speak(document.getElementById("translateTo").value, "Australian Female", {rate: 1});  				
+  			}
+}
+
+function myFunction3() {
+	var e = document.getElementById("sel1");
+    var strlang = e.options[e.selectedIndex].value;
+    console.log(strlang);
+    if(strlang == 1) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Welsh Male", {rate: 0.75});
+    } else if(strlang == 2) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Deutsch Female", {rate: 0.75});
+	} else if(strlang == 3) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Russian Female", {rate: 0.75});
+	} else if(strlang == 4) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Thai Female", {rate: 0.75});
+	} else if(strlang == 5) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "US English Female", {rate: 0.75});
+	} else if(strlang == 6) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "UK English Female", {rate: 0.75});
+	} else if(strlang == 7) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "French Female", {rate: 0.75});
+	} else if(strlang == 8) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Australian Female", {rate: 0.75});
+	} else if(strlang == 9) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Spanish Female", {rate: 0.75});
+	} else if(strlang == 10) {
+			responsiveVoice.speak(document.getElementById("translateFrom").value, "Italian Female", {rate: 0.75});
+	} else if(strlang == 11) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Hindi Female", {rate: 0.75});
+	} else if(strlang == 12) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Romanian Male", {rate: 0.75});
+	} else if(strlang == 13) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Arabic Male", {rate: 0.75});
+	} else if(strlang == 14) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Tamil Male", {rate: 0.75});
+	} else if(strlang == 15) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Turkish Female", {rate: 0.75});
+	} else if(strlang == 16) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Greek Female", {rate: 0.75});
+	} else if(strlang == 17) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Norwegian Female", {rate: 0.75});
+	} else if(strlang == 18) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Japanese Female", {rate: 0.75});
+        }
+    else if(strlang == 19) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Korean Female", {rate: 0.75});
+	} else if(strlang == 20) {
+		responsiveVoice.speak(document.getElementById("translateFrom").value, "Chinese Female", {rate: 0.75});
+	}
+}
+
+function hello() {
+	//localStorage.setItem('username', 'help');
+}
