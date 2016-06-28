@@ -12,10 +12,10 @@ exports.selectusers = function(pool) {
 		source: 'en',
 		target: 'es'
 	}, function(err, translation) {
-	if(err)
-		console.log(err)
-	else
-		console.log(translation);
-	});
+		if(err)
+			console.log(err)
+		else
+			console.log(translation);
+		});
 	}
 }

@@ -51,8 +51,6 @@ app.post('/translate', function(req, res) {
 	});
 });
 
-
-
 app.get('/hello', function(request, response) {
 	console.log(request);
 	console.log("Hello!");
@@ -61,8 +59,6 @@ app.get('/hello', function(request, response) {
 
 app.listen(app.get('port'),app.get('ip'), function() {
   	console.log("Server is listening on port "+app.get('port')+" and ip "+app.get('ip'));
-	
-	console.log("Hello Boiz!!! Printed on Screen");
 });
 
 var authenticated = false;

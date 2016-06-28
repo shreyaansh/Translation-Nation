@@ -17,10 +17,9 @@ function enter() {
 }
 
 function myFunction() {
-
+	
 	var in1 = 0;
 	var langfr = "en";
-
 	
 	if (document.getElementById("option2").checked) {
 		console.log(document.getElementById("option2").value);
@@ -76,13 +75,14 @@ function myFunction() {
 	xhr = new XMLHttpRequest();
 	//var url = "http://localhost:6002/translate";
 	var url= "http://translation-nation.mybluemix.net/translate";
-	console.log(url);	//var url = "http://localhost:6002/hello";
+	//console.log(url);
+	//var url = "http://localhost:6002/";
 	xhr.open("POST", url, true);
 	xhr.setRequestHeader("Content-type", "application/json");
 	xhr.addEventListener("readystatechange", function () {
   		if (this.readyState === 4) {
     		console.log(this.responseText);
-			document.getElementById("translateTo").value = this.responseText;
+			document.getElementById("translateTo").innerHTML = this.responseText;
   	}
 	});
 	var data1 = JSON.stringify({"message":document.getElementById("translateFrom").value, "langfrom":langfr,"language":lang});
