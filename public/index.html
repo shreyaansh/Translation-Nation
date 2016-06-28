@@ -36,7 +36,7 @@
 							<div class="col-xs-6 col-centered">
 					  <label for="pwd" style="font-size: 18px;">Password:</label>
 						<br>
-					  <input type="password" class="form-control" id="pwd" style="font-size: 24px; text-align: center;">
+					  <input type="password" class="form-control" id="pwd" style="font-size: 24px; text-align: center;" onkeypress="login()">
 							</div>
 						</div>
 					</div>
@@ -44,7 +44,7 @@
 				<button class="btn btn-primary btn-lg active" style="background-color:black; margin:16px;" onClick="authenticate()"><span class="glyphicon glyphicon-log-in"></span> Sign In</button>
 				<button class="btn btn-primary btn-lg active" style="background-color:black; margin:16px;" onClick="signUp()"><span class="glyphicon glyphicon-log-in"></span> Sign Up</button>
 				<br>
-			<a href="#" onClick="forgot()">
+				<a href="#" onClick="forgot()">
 					Forgot Password
 				</a>
 			</div>

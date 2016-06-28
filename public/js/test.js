@@ -4,6 +4,18 @@
 
 var lang = "es";
 var flag = 0;
+
+function enter() {
+	document.getElementById('translateFrom').onkeypress = function(e) {
+		if (!e) e = window.Event;
+		var keyCode = e.keyCode || e.which;
+		if (keyCode == '13') {
+			myFunction();
+			return false;
+		}
+	}
+}
+
 function myFunction() {
 
 	var in1 = 0;
@@ -40,32 +52,26 @@ function myFunction() {
 		console.log(in1);
 	}
 
-	if(in1)
-	{
-	if (document.getElementById("option6").checked) {
-		console.log(document.getElementById("option6").value);
-		langfr = document.getElementById("option6").value;
-		console.log(langfr);
+	if(in1) {
+		if (document.getElementById("option6").checked) {
+			console.log(document.getElementById("option6").value);
+			langfr = document.getElementById("option6").value;
+			console.log(langfr);
 
-	}
-	else if(document.getElementById("option7").checked)
-	{
+		} else if(document.getElementById("option7").checked) {
 		console.log(document.getElementById("option7").value);
 		langfr = document.getElementById("option7").value;
 		console.log(langfr);
+		} else if (document.getElementById("option8").checked) {
+			console.log(document.getElementById("option8").value);
+			langfr = document.getElementById("option8").value;
+			console.log(langfr);
+		} else {
+			console.log(document.getElementById("option5").value);
+			langfr = document.getElementById("option5").value;
+			console.log(langfr);
+		}
 	}
-	else if (document.getElementById("option8").checked) {
-		console.log(document.getElementById("option8").value);
-		langfr = document.getElementById("option8").value;
-		console.log(langfr);
-	}
-	else
-	{
-		console.log(document.getElementById("option5").value);
-		langfr = document.getElementById("option5").value;
-		console.log(langfr);
-	}
-}
 
 	xhr = new XMLHttpRequest();
 	//var url = "http://localhost:6002/translate";
@@ -87,15 +93,15 @@ function myFunction() {
 }
 
 function myFunction2() {
-			if(lang === "es") {
-				responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 0.75});
-  			} else if(lang === "it") {
-  				responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 0.75});
-  			} else if(lang === "fr") {
-  				responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 0.75});
-  			} else {
-				responsiveVoice.speak(document.getElementById("translateTo").value, "Australian Female", {rate: 1});  				
-  			}
+	if(lang === "es") {
+		responsiveVoice.speak(document.getElementById("translateTo").value, "Spanish Female", {rate: 0.75});
+	} else if(lang === "it") {
+		responsiveVoice.speak(document.getElementById("translateTo").value, "Italian Female", {rate: 0.75});
+	} else if(lang === "fr") {
+		responsiveVoice.speak(document.getElementById("translateTo").value, "French Female", {rate: 0.75});
+	} else {
+		responsiveVoice.speak(document.getElementById("translateTo").value, "Australian Female", {rate: 1});  				
+	}
 }
 
 function myFunction3() {
@@ -146,7 +152,7 @@ function myFunction3() {
 	}
 }
 
-function hello() {
+function setUser() {
 	var username = localStorage.getItem('username');
 	console.log(username);
 	document.getElementById('user').innerHTML = '<a href="#"><span class="glyphicon glyphicon-user"></span> ' + username + '</a>';

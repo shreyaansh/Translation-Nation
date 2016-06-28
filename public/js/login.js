@@ -1,5 +1,17 @@
 /*eslint-env node, browser*/
 /*globals toastr data*/
+
+function login() {
+	document.getElementById('pwd').onkeypress = function(e) {
+		if (!e) e = window.Event;
+		var keyCode = e.keyCode || e.which;
+		if (keyCode == '13') {
+			authenticate();
+			return false;
+		}
+	}
+}
+
 function authenticate() {
 	console.log("It comes here!");
 	var data = JSON.stringify({"username": document.getElementById("usr").value, "password": document.getElementById("pwd").value});
@@ -10,7 +22,7 @@ function authenticate() {
     		console.log(this.responseText);
 			if (this.responseText === "") {
 				//toastr.success('Signed In!');
-				toastr.error('Could\'nt Sign in. Incorrect Email or Password');
+				toastr.error('Couldn\'t Sign in. Incorrect Email or Password');
 			} else {
 				//toastr.error('Could Sign in. Incorrect Email or Password');
 				toastr.success('Signed In!');
@@ -24,8 +36,6 @@ function authenticate() {
 	xhr.setRequestHeader("content-type", "application/json");
 
 	xhr.send(data);
-	
-	
 }
 
 function signUp() {
