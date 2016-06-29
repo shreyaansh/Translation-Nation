@@ -5,9 +5,16 @@ var get;
 var score = 0;
 var language = 'es';
 
-//function myFunction() {
-	//document.getElementById("game").innerHTML = "Hello";
-//}
+function enter() {
+	document.getElementById('translateFrom').onkeypress = function(e) {
+		if (!e) e = window.Event;
+		var keyCode = e.keyCode || e.which;
+		if (keyCode == '13') {
+			checkIt();
+			return false;
+		}
+	}
+}
 
 function bodyLoad() {
 	//Set the username
@@ -38,13 +45,11 @@ function selectLanguage() {
 	}
 }
 
-//function updateWord() {
-//	
-//}
 var original;
 var translated;
 var userInput;
-function getText() {
+
+function getWord() {
 	selectLanguage();
 	
 	//Now make an API call to get a random translated word
@@ -78,6 +83,7 @@ function checkIt() {
 			toastr.success('Correct!');
 			score=score+1;
 			console.log(score);
+			getWord();
 		} else {
 			toastr.error('Incorrect, please try again!');
 			score=0;

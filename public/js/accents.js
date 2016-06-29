@@ -4,6 +4,18 @@
 
 var lang = "es";
 var flag = 0;
+
+function enter() {
+	document.getElementById('translateFrom').onkeypress = function(e) {
+		if (!e) e = window.Event;
+		var keyCode = e.keyCode || e.which;
+		if (keyCode == '13') {
+			textToSpeech();
+			return false;
+		}
+	}
+}
+
 function myFunction() {
 	var in1 = 0;
 	var langfr = "en";
