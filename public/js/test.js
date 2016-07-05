@@ -155,5 +155,6 @@ function myFunction3() {
 function setUser() {
 	var username = localStorage.getItem('username');
 	console.log(username);
+	if (username == null) { username = 'User'}
 	document.getElementById('user').innerHTML = '<a href="#"><span class="glyphicon glyphicon-user"></span> ' + username + '</a>';
 }
