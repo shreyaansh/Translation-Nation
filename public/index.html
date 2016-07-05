@@ -16,10 +16,18 @@
   <link rel="stylesheet" href="stylesheets/login.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet" type="text/css">
   <script src="js/login.js"></script>
+  <script>
+    $(function(){
+        $(".typed").typed({
+            strings: ["Translation Nation", "La traducción Nación", "Nation de traduction", "Nazione Traduzione", "Translation^500Nation"],
+            typeSpeed: 30
+        });
+    });
+  </script>
   </head> 
 	<body>
 		<div class="container-fluid">
-			<div class="title">Translation Nation</div>
+			<div class="title"><span class="typed"></span></div>
 			<div class="main">
 				<h2>Login
 					<small>
