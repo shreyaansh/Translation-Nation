@@ -50,7 +50,7 @@
 			<div class="row"><div class="col-md-12" style="height:50px;"></div></div>
 		  	<div class="row">
 				<center>
-					<h2>Practice</h2>
+					<font size="24px">Practice</font>
 					<div class="jumbotron" style="background:none;">
 						<div class="btn-group" data-toggle="buttons">
 							<label class="btn btn-primary active">
@@ -65,13 +65,15 @@
 						</div>
 						<br>
 						<br>
-						<div class="random" id="randomtext" style="font-size:24px; color:white;">Hello</div>
+						<div class="random" id="randomtext" style="font-size:24px; color:white;">Request a new word!</div>
 						<br>
 						<input type="text" class="form-control" id="answer" onkeypress="enter()">
 						<br>
+						<br>
+						<button onClick="getWord()" type="button" class="btn btn-primary btn-lg">New Word!</button>
+						<button onClick="checkIt()" type="button" class="btn btn-primary btn-lg">Check!</button>
 					</div>
-					<button onClick="getWord()" type="button" class="btn btn-primary btn-lg">New Word!</button>
-					<button onClick="checkIt()" type="button" class="btn btn-primary btn-lg">Check!</button>
+					
 				</center>
 			</div>
 		</div>
