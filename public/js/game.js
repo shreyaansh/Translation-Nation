@@ -20,6 +20,7 @@ function bodyLoad() {
 	//Set the username
 	var username = localStorage.getItem('username');
 	console.log(username);
+	if (username == null) { username = 'User'}
 	document.getElementById('user').innerHTML = '<a href="#"><span class="glyphicon glyphicon-user"></span> ' + username + '</a>';
 
 	//Select the language first
@@ -126,6 +127,5 @@ function init() {
 
 function initScores() {
 	document.getElementById("game").innerHTML = "User is: " + get + " <br> " + "Highscore for the user is: " + score;
-	
 	document.getElementById("currentScore").innerHTML = "Current score is: 0";
 }
