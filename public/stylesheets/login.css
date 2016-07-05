@@ -6,6 +6,14 @@ body,html {
 	color: #ffffff;
 }
 
+.title {
+	width: 100%;
+	position: absolute;
+	text-align: center;
+	top: 18%;
+	font-size: 48px;
+}
+
 .main { 
     width: 100%;
     position: absolute;
