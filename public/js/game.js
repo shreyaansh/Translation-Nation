@@ -84,6 +84,7 @@ function checkIt() {
 			toastr.success('Correct!');
 			score=score+1;
 			console.log(score);
+			document.getElementById('answer').value = '';
 			getWord();
 		} else {
 			toastr.error('Incorrect, please try again!');
