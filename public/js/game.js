@@ -25,11 +25,6 @@ function bodyLoad() {
 
 	//Select the language first
 	selectLanguage();
-	//Call init to get the scores of the user
-	//init();
-	
-	//Call randomize to get the word adn show it in spanish or whatever language is selected.
-	//updateWord();
 }
 
 function selectLanguage() {
