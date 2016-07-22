@@ -198,5 +198,3 @@ app.post('/generaterandom', function(req, res) {
 		}
 	});
 });
-
-//module.exports = app;
